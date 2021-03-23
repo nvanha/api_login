@@ -1,4 +1,4 @@
-### [Facebook/Google API | Login with Facebook/Google in PHP][link] - [nvanha][website]
+### [Facebook/Google API | Login with Facebook/Google accounts in PHP][link] - [nvanha][website]
 
 ## Introduce
 -
@@ -22,15 +22,15 @@ if (!$conn) {
 ---
 
 ---
-Create Virtual Host Name (In this project, I use XAMPP)
+Create Virtual Host Name
 - Step 1: 
-Access to `xampp\apache\conf\httpd.conf`, and search for the code below, remove comment at line 2 if it is available
+Access to `C:\xampp\apache\conf\httpd.conf`, and search for the code below, remove comment at line 2 if it is available
 ```bath
 # Virtual hosts
 # Include conf/extra/httpd-vhosts.conf
 ```
 - Step 2:
-Access to `xampp\apache\conf\extra\httpd-vhosts.conf`, and add the code below
+Access to `C:\xampp\apache\conf\extra\httpd-vhosts.conf`, and add the code below
 ```bath
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/demo"
@@ -57,12 +57,13 @@ commonName_default          = demo.com
 DNS.1       = demo.com
 ```
 - Step 3: Run `make-cert.bat`, then enter your domain, and press the enter key until the end
+<br />
 *Note, folder "demo.com" will be created*
 - Step 4: Run `server` in the `demo.com` directory, and follow these steps below
 ```bath
 Install Certificate -> Local Machine -> Next -> Place all certificates in the following store -> Browse -> Trusted Root Certification Authorities -> OK -> Next -> Finish -> OK
 ```
-- Step 4: Copy the content of `document.txt`, and paste into `C:\xampp\apache\conf\extra\httpd-vhosts.conf`
+- Step 5: Copy the content of `document.txt`, and paste into `C:\xampp\apache\conf\extra\httpd-vhosts.conf`
 ```bath
  <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/demo"
