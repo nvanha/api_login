@@ -58,6 +58,7 @@ DNS.1       = demo.com
 ```
 - Step 3: Run `make-cert.bat`, then enter your domain, and press the enter key until the end
 <br />
+
 *Note, folder "demo.com" will be created*
 - Step 4: Run `server` in the `demo.com` directory, and follow these steps below
 ```bath
