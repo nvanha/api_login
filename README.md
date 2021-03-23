@@ -83,7 +83,7 @@ Install Certificate -> Local Machine -> Next -> Place all certificates in the fo
 ## Path
 Index:
 ```php
-demo.com
+https://demo.com/
 ```
 
 ### Connect with me:
