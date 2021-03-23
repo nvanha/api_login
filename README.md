@@ -25,13 +25,13 @@ if (!$conn) {
 Create Virtual Host Name
 - Step 1: 
 Access to `C:\xampp\apache\conf\httpd.conf`, and search for the code below, remove comment at line 2 if it is available
-```bath
+```php
 # Virtual hosts
 # Include conf/extra/httpd-vhosts.conf
 ```
 - Step 2:
 Access to `C:\xampp\apache\conf\extra\httpd-vhosts.conf`, and add the code below
-```bath
+```php
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/demo"
     ServerName demo.com
@@ -40,7 +40,7 @@ Access to `C:\xampp\apache\conf\extra\httpd-vhosts.conf`, and add the code below
 *Note, DocumentRoot is path to the project directory and ServerName is the link that leads you want to put on the website*
 - Step 3:
 Access to `C:\Windows\System32\drivers\etc\hosts`, and add your host
-```bath
+```php
 127.0.0.1 demo.com
 ```
 *Note, host must have the same name as ServerName above*
@@ -50,7 +50,7 @@ Configuring SSL HTTPS in XAMPP
 - Step 1: Create `crt` directory in `C:\xampp\apache\`, then copy `cert.conf`, `document.txt` and `make-cert.bat` in the `SSL` directory of Project, and paste in there
 - Step 2:
 Open `cert.conf`, and correct the lines below
-```bath
+```php
 ...
 commonName_default          = demo.com
 ...
@@ -60,11 +60,11 @@ DNS.1       = demo.com
 
 *Note, folder "demo.com" will be created*
 - Step 4: Run `server` in the `demo.com` directory, and follow these steps below
-```bath
+```php
 Install Certificate -> Local Machine -> Next -> Place all certificates in the following store -> Browse -> Trusted Root Certification Authorities -> OK -> Next -> Finish -> OK
 ```
 - Step 5: Copy the content of `document.txt`, and paste into `C:\xampp\apache\conf\extra\httpd-vhosts.conf`
-```bath
+```php
  <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/demo"
     ServerName demo.com
@@ -82,7 +82,7 @@ Install Certificate -> Local Machine -> Next -> Place all certificates in the fo
 - Step 5: Restart `Apache` and `MySQL` in `XAMPP`
 ## Path
 Index:
-```path
+```php
 demo.com
 ```
 
