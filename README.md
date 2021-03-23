@@ -82,7 +82,7 @@ Install Certificate -> Local Machine -> Next -> Place all certificates in the fo
 - Step 5: Restart `Apache` and `MySQL` in `XAMPP`
 ## Path
 Index:
-```php
+```path
 https://demo.com/
 ```
 
