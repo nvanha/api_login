@@ -34,7 +34,9 @@ Create Virtual Host Name:
     ServerName api_login.com
 </VirtualHost>
 ```
+
 *Note, DocumentRoot is path to the project directory and ServerName is the link that leads you want to put on the website*
+
 - Step 3: Access to `C:\Windows\System32\drivers\etc\hosts`, and add your host
 ```php
 127.0.0.1 api_login.com
