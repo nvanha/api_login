@@ -34,9 +34,7 @@ Create Virtual Host Name:
     ServerName api_login.com
 </>
 ```
-
 *Note, DocumentRoot is path to the project directory and ServerName is the link that leads you want to put on the website*
-
 - Step 3: Access to `C:\Windows\System32\drivers\etc\hosts`, and add your host
 ```php
 127.0.0.1 api_login.com
@@ -54,7 +52,6 @@ commonName_default          = api_login.com
 DNS.1       = api_login.com
 ```
 - Step 3: Run `make-cert.bat`, then enter your domain, and press the enter key until the end
-
 *Note, folder "api_login.com" will be created*
 - Step 4: Run `server` in the `api_login.com` directory, and follow these steps below
 ```php
