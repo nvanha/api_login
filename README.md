@@ -28,11 +28,11 @@ Create Virtual Host Name:
 # Include conf/extra/httpd-vhosts.conf
 ```
 - Step 2: Access to `C:\xampp\apache\conf\extra\httpd-vhosts.conf`, and add the code below
-```php
-< *:80>
+```VirtualHost
+<VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
-</>
+</VirtualHost>
 ```
 *Note, DocumentRoot is path to the project directory and ServerName is the link that leads you want to put on the website*
 - Step 3: Access to `C:\Windows\System32\drivers\etc\hosts`, and add your host
@@ -52,26 +52,27 @@ commonName_default          = api_login.com
 DNS.1       = api_login.com
 ```
 - Step 3: Run `make-cert.bat`, then enter your domain, and press the enter key until the end
+
 *Note, folder "api_login.com" will be created*
 - Step 4: Run `server` in the `api_login.com` directory, and follow these steps below
 ```php
 Install Certificate -> Local Machine -> Next -> Place all certificates in the following store -> Browse -> Trusted Root Certification Authorities -> OK -> Next -> Finish -> OK
 ```
 - Step 5: Copy the content of `document.txt`, and paste into `C:\xampp\apache\conf\extra\httpd-vhosts.conf`
-```php
- < *:80>
+```VirtualHost
+ <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
     ServerAlias *.api_login.com
- </>
- < *:443>
+ </VirtualHost>
+ <VirtualHost *:443>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
     ServerAlias *.api_login.com
     SSLEngine on
     SSLCertificateFile "crt/api_login.com/server.crt"
     SSLCertificateKeyFile "crt/api_login.com/server.key"
- </>
+ </VirtualHost>
 ```
 - Step 5: Restart `Apache` and `MySQL` in `XAMPP`
 ---
