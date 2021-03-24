@@ -80,11 +80,11 @@ Install Certificate -> Local Machine -> Next -> Place all certificates in the fo
 ```
 - Step 5: Restart `Apache` and `MySQL` in `XAMPP`
 ---
-Set up fb_config in `modules/fb_config.php`
+Create a `Facebook login project`
 - Step 1: Visit [Developers Facebook][dev_fb] to create an account, then create a `facebook login application`
 - Step 2: Paste the path to your website created above into fields `Privacy Policy URL` and `Site URL`
 - Step 3: Paste the path of `fb_callback.php` into filed `Valid OAuth Redirect URIs` in settings of your products
-- Step 4: Once done, go to settings and copy the `App ID`, `App Secret` and `API Version`, then paste in the `fb_config.php` as below
+- Step 4: Once done, go to settings and copy the `App ID`, `App Secret` and `API Version`, then paste into `fb_config.php` in `modules/fb_config.php` as below
 ```php
 <?php
     $fb = new Facebook\Facebook([
@@ -94,7 +94,21 @@ Set up fb_config in `modules/fb_config.php`
     ]);
 ?>
 ```
+---
+Create a `Google login project`
+- Step 1: Visit [Google Cloud Platform][dev_gg] to create an account, then create a `google login application`
+- Step 2: Once done, go to credentials and copy the `Client ID` and `Client secret`, then paste into `gg_source.php` in `modules/gg_source.php` as below
+```php
+<?php
+    ...
+    $client_id = '12312312-v2131938712093791';
+    $client_secret = 'kj1231298casdjkh1';
+    $redirect_uri = 'https://demo.com';
+    ...
+?>
+```
 ## Path
+
 Index:
 ```path
 https://demo.com/
@@ -111,3 +125,4 @@ https://demo.com/
 [facebook]: https://www.facebook.com/nvh1120
 [link]: https://github.com/nvanha/facebook_google_api_login
 [dev_fb]: https://developers.facebook.com/apps/
+[dev_gg]: https://console.cloud.google.com/getting-started
