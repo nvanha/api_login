@@ -28,7 +28,8 @@ Create Virtual Host Name:
 # Include conf/extra/httpd-vhosts.conf
 ```
 - Step 2: Access to `C:\xampp\apache\conf\extra\httpd-vhosts.conf`, and add the code below
-```VirtualHost
+
+```bath
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
@@ -59,7 +60,8 @@ DNS.1       = api_login.com
 Install Certificate -> Local Machine -> Next -> Place all certificates in the following store -> Browse -> Trusted Root Certification Authorities -> OK -> Next -> Finish -> OK
 ```
 - Step 5: Copy the content of `document.txt`, and paste into `C:\xampp\apache\conf\extra\httpd-vhosts.conf`
-```VirtualHost
+
+```bath
  <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
