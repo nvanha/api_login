@@ -29,7 +29,6 @@
         exit;
     }
 
-    // Lấy thông tin của người dùng trên Facebook
     try {
         $response = $fb->get('/me?fields=id,name,email', $accessToken->getValue());
     } catch (Facebook\Exceptions\FacebookResponseException $e) {

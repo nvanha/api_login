@@ -1,9 +1,10 @@
 ### [Facebook/Google API | Login with Facebook/Google accounts in PHP][link] - [nvanha][website]
 
 ## Introduce
--
--
--
+- `Facebook/Google API`
+- Form login with `Facebook/Google accounts` in `PHP`
+- Clase redes Servidor `HTTP` con `XAMPP`
+- How to enable `SSL (HTTPS protocol)` with `XAMPP` in a local `PHP` project
 
 ## Installation
 Set config in `modules/connect_db.php` :
@@ -95,4 +96,4 @@ https://demo.com/
 [website]: https://nvanha.github.io/myweb
 [instagram]: https://www.instagram.com/_haa_nguyen
 [facebook]: https://www.facebook.com/nvh1120
-[link]: https://github.com/nvanha/api_login
+[link]: https://github.com/nvanha/facebook_google_api_login
