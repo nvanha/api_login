@@ -29,10 +29,10 @@ Create Virtual Host Name:
 ```
 - Step 2: Access to `C:\xampp\apache\conf\extra\httpd-vhosts.conf`, and add the code below
 ```php
-<VirtualHost *:80>
+< *:80>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
-</VirtualHost>
+</>
 ```
 
 *Note, DocumentRoot is path to the project directory and ServerName is the link that leads you want to put on the website*
@@ -62,19 +62,19 @@ Install Certificate -> Local Machine -> Next -> Place all certificates in the fo
 ```
 - Step 5: Copy the content of `document.txt`, and paste into `C:\xampp\apache\conf\extra\httpd-vhosts.conf`
 ```php
- <VirtualHost *:80>
+ < *:80>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
     ServerAlias *.api_login.com
- </VirtualHost>
- <VirtualHost *:443>
+ </>
+ < *:443>
     DocumentRoot "C:/xampp/htdocs/api_login"
     ServerName api_login.com
     ServerAlias *.api_login.com
     SSLEngine on
     SSLCertificateFile "crt/api_login.com/server.crt"
     SSLCertificateKeyFile "crt/api_login.com/server.key"
- </VirtualHost>
+ </>
 ```
 - Step 5: Restart `Apache` and `MySQL` in `XAMPP`
 ---
