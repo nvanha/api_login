@@ -1,4 +1,4 @@
-### [Facebook/Google API | Login with Facebook/Google accounts in PHP][link] - [nvanha][website] 👋
+### [Facebook/Google API | Login with Facebook/Google accounts in PHP][link] - [nvan.ha][website] 👋
 
 ## Introduce
 - `Facebook/Google API`
