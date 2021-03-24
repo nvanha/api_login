@@ -7,7 +7,7 @@
 - How to enable `SSL (HTTPS protocol)` with `XAMPP` in a local `PHP` project
 
 ## Installation
-Set config in `modules/connect_db.php` :
+Set up config in `modules/connect_db.php`
 ```php
 $host = '';
 $user_name = '';
@@ -20,8 +20,6 @@ if (!$conn) {
     echo "Connection failed: ".mysqli_connect_error();
 }
 ```
----
-
 ---
 Create Virtual Host Name
 - Step 1: 
@@ -81,6 +79,21 @@ Install Certificate -> Local Machine -> Next -> Place all certificates in the fo
  </VirtualHost>
 ```
 - Step 5: Restart `Apache` and `MySQL` in `XAMPP`
+---
+Set up fb_config in `modules/fb_config.php`
+- Step 1: Visit [Developers Facebook][dev_fb] to create an account, then create a `facebook login application`
+- Step 2: Paste the path to your website created above into fields `Privacy Policy URL` and `Site URL`
+- Step 3: Paste the path of `fb_callback.php` into filed `Valid OAuth Redirect URIs` in settings of your products
+- Step 4: Once done, go to settings and copy the `App ID`, `App Secret` and `API Version`, then paste in the `fb_config.php` as below
+```php
+<?php
+    $fb = new Facebook\Facebook([
+        'app_id' => '012345678987654',
+        'app_secret' => 'password',
+        'default_graph_version' => 'v10.0'
+    ]);
+?>
+```
 ## Path
 Index:
 ```path
@@ -97,3 +110,4 @@ https://demo.com/
 [instagram]: https://www.instagram.com/_haa_nguyen
 [facebook]: https://www.facebook.com/nvh1120
 [link]: https://github.com/nvanha/facebook_google_api_login
+[dev_fb]: https://developers.facebook.com/apps/
